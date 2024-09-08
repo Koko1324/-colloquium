@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버스 노선 추천</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        header a img {
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        div{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="main_logo1.png" alt="Main Logo">
+        </a>
+    </header>
+
+    <div>
+        <h1>버스 노선 추천</h1>
+        <p>365-21, 365-22, 365-25, 365-50 중에서 추천받기</p>
+        <button onclick="getRecommendedRoute()">노선 추천 받기</button>
+        <p id="route-result">추천된 노선이 여기에 표시됩니다.</p>
+    </div>
+
+    <script>
+        function getRecommendedRoute() {
+            // 백엔드 서버로 요청 보내기
+            fetch('/api/recommend-route')  // 백엔드에 추천 요청을 보냄
+                .then(response => response.json())  // JSON 응답을 받음
+                .then(data => {
+                    // 추천된 노선을 화면에 표시
+                    document.getElementById('route-result').textContent = `추천된 노선: ${data.route}`;
+                })
+                .catch(error => {
+                    console.error('노선 추천 오류:', error);
+                    document.getElementById('route-result').textContent = '노선 추천에 실패했습니다.';
+                });
+        }
+    </script>
+</body>
+</html>
