@@ -4,10 +4,10 @@
     <title>버스</title>
     <meta charset="utf-8">
     <style>
-        /* 전체 배경을 다크 그레이로 설정 */
+        /* 전체 배경을 밝은 회색으로 설정 */
         body {
-            background-color: #1c1c1c;
-            color: white;
+            background-color: #f0f0f0;
+            color: #333;
             font-family: Arial, sans-serif;
         }
 
@@ -19,7 +19,7 @@
         /* 버튼 스타일 - 둥근 모서리와 그림자 추가 */
         button {
             color: white; /* 흰색 텍스트 */
-            background: #4CAF50; /* 초록색 배경 */
+            background: #007BFF; /* 파란색 배경 */
             border: none;
             border-radius: 25px; /* 둥근 모서리 */
             padding: 12px 24px;
@@ -30,15 +30,15 @@
 
         /* 버튼 hover 효과 */
         button:hover {
-            background: #45a049; /* hover 시 더 진한 초록색 */
+            background: #0056b3; /* hover 시 더 어두운 파란색 */
             transform: translateY(-2px); /* 살짝 위로 움직임 */
         }
 
         /* 텍스트 입력 필드 스타일 */
         input[type="text"] {
-            background-color: #333;
-            color: white;
-            border: 1px solid #555;
+            background-color: white;
+            color: #333;
+            border: 1px solid #ddd;
             padding: 10px;
             width: 100%;
             box-sizing: border-box;
@@ -48,7 +48,7 @@
 
         /* 입력 필드의 placeholder 스타일 */
         input::placeholder {
-            color: gray;
+            color: #aaa;
         }
 
         /* 버튼을 세로로 정렬 */
@@ -66,9 +66,11 @@
 
         /* 네비게이션의 라벨 텍스트 */
         nav label {
-            color: white;
+            color: #333;
         }
-        #result{
+
+        /* 조회 버튼을 오른쪽 아래에 위치시키기 */
+        #result {
             position: absolute;
             bottom: 20px;
             right: 20px;
@@ -88,7 +90,7 @@
             <input type="text" id="destination" name="destination" placeholder="목적지를 입력하세요">
     
             <button id="now" class="location" onclick="getLocation()">현위치</button>
-            <button id="result" class="location" type="button" onclick="location.href='print.html'">조회</button>
+            <button id="result" class="location" type="button" onclick="location.href='print1.html'">조회</button>
         </div>
     </div>
 

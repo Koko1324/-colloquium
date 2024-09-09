@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>버스 노선 추천</title>
     <style>
-        /* 전체 배경을 다크 그레이로 설정 */
+        /* 전체 배경을 밝은 회색으로 설정 */
         body {
             font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: white;
+            background-color: #f5f5f5;
+            color: #333;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -25,6 +25,10 @@
             position: absolute;
             top: 0;
             left: 0;
+            background-color: #ffffff; /* 흰색 배경 */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+            width: 100%; /* 헤더를 전체 너비로 확장 */
+            box-sizing: border-box;
         }
 
         /* 로고 이미지 크기 */
@@ -40,6 +44,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         /* 버튼을 오른쪽 아래에 고정 */
@@ -52,7 +58,7 @@
         /* 버튼 스타일 - 둥근 모서리와 그림자 추가 */
         button {
             padding: 12px 24px;
-            background-color: #4CAF50; /* 초록색 배경 */
+            background-color: #007BFF; /* 파란색 배경 */
             color: white;
             border: none;
             border-radius: 25px; /* 둥근 모서리 */
@@ -63,7 +69,7 @@
 
         /* 버튼 hover 효과 */
         button:hover {
-            background-color: #45a049; /* 더 진한 초록색 */
+            background-color: #0056b3; /* 더 어두운 파란색 */
             transform: translateY(-2px); /* 살짝 위로 이동 */
         }
 
@@ -71,13 +77,13 @@
         #route-result {
             margin-top: 20px;
             font-size: 1.2rem;
-            color: #fff;
+            color: #333; /* 다크 그레이 색상 */
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <a href="index1.html">
             <img src="main_logo1.png" alt="Main Logo">
         </a>
     </header>
